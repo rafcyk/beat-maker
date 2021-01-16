@@ -4,7 +4,44 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family: sans-serif;
+}
+
+.wrrapper{
+    position: relative;
+}
+
 canvas{
     background-color: rgb(33, 33, 33);
     display: block;
+}
+
+.main-circle{
+    position: absolute;
+    width:250px;
+    height: 250px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 999!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    color:blanchedalmond;
+    font-weight: bold;
+    pointer-events: none;
 }
