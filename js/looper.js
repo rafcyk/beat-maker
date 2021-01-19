@@ -19,59 +19,68 @@ looperSounds.forEach(sound => {
 
 let snareLoop;
 
-let tempo = 200;
+let maxTempo = 210;
+let minTempo = 60;
+
 
 function playLoop() {
+    let tempo = document.querySelector('.tempo-input').value;
+
+    if(tempo >= minTempo && tempo <= maxTempo){
+        play.classList.add('disactive-control')
+        pause.classList.remove('disactive-control')
     
-    play.style.pointerEvents = 'none';
-    pause.style.pointerEvents = 'auto';
-
-    let i = 0;
-    snareLoop = setInterval(() => {
-        //removing styles from sounds
-        snareSounds.forEach(sound => {
-            if(sound.classList.contains('active-sound')){
-                sound.classList.remove('active-sound');
+        let i = 0;
+        snareLoop = setInterval(() => {
+            //removing styles from sounds
+            snareSounds.forEach(sound => {
+                if(sound.classList.contains('active-sound')){
+                    sound.classList.remove('active-sound');
+                }
+            });
+            kickSounds.forEach(sound => {
+                if(sound.classList.contains('active-sound')){
+                    sound.classList.remove('active-sound');
+                }
+            });
+            hiHatSounds.forEach(sound => {
+                if(sound.classList.contains('active-sound')){
+                    sound.classList.remove('active-sound');
+                }
+            });
+    
+            //play sound
+            if(snareSounds[i].classList.contains('active')){
+                snare.play();
             }
-        });
-        kickSounds.forEach(sound => {
-            if(sound.classList.contains('active-sound')){
-                sound.classList.remove('active-sound');
+            if(kickSounds[i].classList.contains('active')){
+                kick.play();
             }
-        });
-        hiHatSounds.forEach(sound => {
-            if(sound.classList.contains('active-sound')){
-                sound.classList.remove('active-sound');
+            if(hiHatSounds[i].classList.contains('active')){
+                hiHat.play();
             }
-        });
+    
+            snareSounds[i].classList.add('active-sound');
+            kickSounds[i].classList.add('active-sound');
+            hiHatSounds[i].classList.add('active-sound');
+    
+            //increment loop
+            i++;
+    
+            if(i >= snareSounds.length){
+                i=0;
+            }
+        }, 60000/tempo);
+    } else {
+        alert(`Tempo available ${minTempo}-${maxTempo}`)
+    }
 
-
-        if(snareSounds[i].classList.contains('active')){
-            snare.play();
-        }
-        if(kickSounds[i].classList.contains('active')){
-            kick.play();
-        }
-        if(hiHatSounds[i].classList.contains('active')){
-            hiHat.play();
-        }
-
-        snareSounds[i].classList.add('active-sound');
-        kickSounds[i].classList.add('active-sound');
-        hiHatSounds[i].classList.add('active-sound');
-
-        i++;
-
-        if(i >= snareSounds.length){
-            i=0;
-        }
-    }, 60000/tempo);
 }
 
 play.addEventListener('click', playLoop)
 pause.addEventListener('click',  ()=> {
-    play.style.pointerEvents = 'auto';
-    play.style.pointerEvents = 'none';
+    play.classList.remove('disactive-control')
+    pause.classList.add('disactive-control')
     clearInterval(snareLoop);
     snareSounds.forEach(sound => {
         if(sound.classList.contains('active-sound')){

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Beats maker</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -13,17 +15,18 @@
         <div class="samples"></div>
     </div>
 
-    <div class="looper">
+    <div class="looper disappear">
         <div class="looper-box">
             <p class="looper-title">Add some beat</p>
-            <div class="looper-controls">
-                <p class="play">Play</p>
-                <p class="pause">Stop</p>
-            </div>
             <div class="tempo-box">
                 <p class="tempo-title">Tempo</p>
-                <input type="number" min="60" max="200" value="120">
+                <input type="number" min="60" max="210" value="120" class="tempo-input">
             </div>
+            <div class="looper-controls">
+                <p class="play"><img src="./images/play.png" alt="play" class="loop-icon">Play</p>
+                <p class="pause disactive-control"><img src="./images/stop.png" alt="stop" class="loop-icon">Stop</p>
+            </div>
+
             <div class="loop-elements">
                 <div class="loop-el snare-box">
                     <audio src="./looper/snare.mp3" class='snare-audio'></audio>
@@ -119,7 +122,7 @@
         </div>
     </div>
 
-    <div class="looper-add">Add some beats</div>
+    <div class="looper-add pulse">Add some beat</div>
 
     <script src="./js/main.js" defer></script>
     <script src="./js/samples.js" defer></script>

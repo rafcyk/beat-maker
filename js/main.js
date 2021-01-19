@@ -16,13 +16,22 @@ function showRect() {
     rects.forEach(rect => {
         let min = Math.ceil(130);
         let max = Math.floor(160);
+        let minColor = Math.ceil(0);
+        let maxColor = Math.floor(250);
+        let r = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
+        let g = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
+        let b = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
+        let r2 = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
+        let g2 = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
+        let b2 = Math.floor(Math.random() * (maxColor - minColor)) + minColor;
         const height = Math.floor(Math.random() * (max - min)) + min;
         rect.animate([
-            {minHeight: '110px'},
+            {minHeight: '110px',
+            backgroundImage:`linear-gradient(to left, rgb(${r},${g},${b}), rgb(${r2},${g2},${b2}))`},
             {minHeight: `${height}px`},
-            {minHeight: '110px'}
+            {minHeight: '110px'},
         ],{
-            duration:400,
+            duration:1000,
             easing: 'ease-out'
         })
     });

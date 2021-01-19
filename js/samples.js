@@ -9,6 +9,16 @@ const samples = [
                 './samples/8.mp3',
                 './samples/9.mp3',
                 './samples/10.mp3',
+                './samples/11.mp3',
+                './samples/12.mp3',
+                './samples/13.mp3',
+                './samples/14.mp3',
+                './samples/15.mp3',
+                './samples/16.mp3',
+                './samples/17.mp3',
+                './samples/18.mp3',
+                './samples/19.mp3',
+                './samples/20.mp3',
                 ]
 
 const samplesElements = [];
