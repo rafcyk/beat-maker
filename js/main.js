@@ -41,7 +41,6 @@ function drawShapes(e) {
 
     //draw shape
     let chooseShape = shapes[Math.floor(Math.random() * shapes.length)]
-    console.log(chooseShape);
 
     let mouseX = e.clientX;
     let mouseY = e.clientY;
@@ -118,29 +117,6 @@ function drawShapes(e) {
         break;
     
         case 'circle':
-            rectShape.className = chooseShape;
-            wrapper.appendChild(rectShape);
-            rectShape.style.borderColor = `rgb(${r},${g},${b})`
-
-            rectShape.animate([
-                {minWidth:'0px',
-                minHeight:'0px',
-                top:`${mouseY}px`,
-                left:`${mouseX}px`
-            },
-                {minWidth:`${rectSize}px`,
-                minHeight:`${rectSize}px`,
-                top:`${mouseY - rectSize/2}px`,
-                left:`${mouseX - rectSize/2}px`},
-            ],{
-                duration:animateTime,
-            })
-
-            removeAnimate();
-
-        break;
-
-        case 'triangle':
             rectShape.className = chooseShape;
             wrapper.appendChild(rectShape);
             rectShape.style.borderColor = `rgb(${r},${g},${b})`
