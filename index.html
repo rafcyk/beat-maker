@@ -15,11 +15,115 @@
 
     <div class="looper">
         <div class="looper-box">
-            
+            <p class="looper-title">Add some beat</p>
+            <div class="looper-controls">
+                <p class="play">Play</p>
+                <p class="pause">Stop</p>
+            </div>
+            <div class="tempo-box">
+                <p class="tempo-title">Tempo</p>
+                <input type="number" min="60" max="200" value="120">
+            </div>
+            <div class="loop-elements">
+                <div class="loop-el snare-box">
+                    <audio src="./looper/snare.mp3" class='snare-audio'></audio>
+                    <p class="loop-instrument">Snare</p>
+                    <div class="tacts">
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loop-el kick-box">
+                    <audio src="./looper/kick.mp3" class='kick-audio'></audio>
+                    <p class="loop-instrument">Kick</p>
+                    <div class="tacts">
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loop-el hi-hat-box">
+                    <audio src="./looper/hi-hat.mp3" class='hi-hat-audio'></audio>
+                    <p class="loop-instrument">Hi-hat</p>
+                    <div class="tacts">
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                        <div class="tact">
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                            <div class="sound"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div class="looper-add">Add some beats</div>
+
     <script src="./js/main.js" defer></script>
     <script src="./js/samples.js" defer></script>
+    <script src="./js/looper.js" defer></script>
+    <script src="./js/buttons.js" defer></script>
 </body>
 </html>
