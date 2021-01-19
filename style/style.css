@@ -101,8 +101,8 @@ audio{
     padding:20px;
     font-size: 25px;
     text-transform: uppercase;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .looper-title{
@@ -152,7 +152,6 @@ audio{
     width:25%;
     padding:5px;
     margin:0 15px;
-    /* background-color: rgba(0, 0, 0, .7); */
     display: flex;
 }
 
@@ -290,6 +289,8 @@ audio{
         height: 100%;
         padding:5px;
         padding-top: 50px;
+        border-top-left-radius: 75px;
+        border-bottom-right-radius: 75px;
     }
 
     .loop-instrument{
