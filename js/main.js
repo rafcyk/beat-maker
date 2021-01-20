@@ -1,3 +1,5 @@
+//Code by Rafał Dobrowolski
+
 const wrapper = document.querySelector('.wrapper');
 let radius = 0;
 const rects = [];
